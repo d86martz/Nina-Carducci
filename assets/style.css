@@ -239,7 +239,15 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
-
+footer {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+}
+footer div{
+	display: flex;
+	
+}
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
