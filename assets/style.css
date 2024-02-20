@@ -96,13 +96,14 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link {
+	color: #000;
+	cursor: pointer;
+}
+.nav-pills .active-tag, .nav-pills .nav-link.active , .nav-pills .show > .nav-link {
 	color: #fff;
 	background-color: #6d6731;
 	border-radius:0 ;
-}
-.nav-pills .nav-link {
-	color: #000
 }
 .item-column {
 	position: relative;
