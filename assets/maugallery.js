@@ -59,10 +59,10 @@
 
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
-      $.fn.mauGallery.methods.prevImage()
+      $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
     $(".gallery").on("click", ".mg-next", () =>
-      $.fn.mauGallery.methods.nextImage()
+      $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
   };
   $.fn.mauGallery.methods = {
@@ -154,7 +154,8 @@
         }
       });
       next =
-        imagesCollection[index-1]
+          imagesCollection[index - 1] ||
+          imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
@@ -192,7 +193,7 @@
           
         }
       });
-      next = imagesCollection[index+1]
+      next = imagesCollection[index + 1] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
